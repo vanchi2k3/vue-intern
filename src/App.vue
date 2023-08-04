@@ -377,6 +377,7 @@
       </div>
     </div>
     <div class="third">
+      <div class="third-Text">Choose paint color</div>
       <div class="thirdInner">
         <!--IF-->
         <div v-for="n in colors" :key="n">
@@ -399,6 +400,32 @@
         </div>
         <!--IF-->
       </div>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-Name">
+      <svg
+        width="20"
+        height="21"
+        viewBox="0 0 20 21"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.99357 20.3046C9.45494 20.3046 8.95598 20.0616 8.62395 19.6371L6.62627 17.1037L3.12454 17.1015C1.40182 17.1015 0 15.6997 0 13.9765V3.78124C0 2.05807 1.40182 0.65625 3.12499 0.65625H16.875C18.5981 0.65625 20 2.05807 20 3.78124V10.0703C20 10.5018 19.6502 10.8515 19.2187 10.8515C18.7872 10.8515 18.4375 10.5018 18.4375 10.0703V3.78124C18.4375 2.91973 17.7365 2.21875 16.875 2.21875H3.12499C2.26348 2.21875 1.5625 2.91973 1.5625 3.78124V13.9765C1.5625 14.838 2.26348 15.539 3.12499 15.539L7.00591 15.5413C7.24501 15.5415 7.47084 15.6512 7.61885 15.8389L9.85289 18.672C9.89851 18.7304 9.9542 18.7422 9.99372 18.7422H9.99449C10.0339 18.742 10.09 18.7299 10.1336 18.6733C10.135 18.6715 10.1364 18.6697 10.1378 18.668L12.3536 15.8386C12.5018 15.6495 12.7286 15.539 12.9687 15.539H16.875C17.7366 15.539 18.4375 14.838 18.4375 13.9765C18.4375 13.545 18.7872 13.1953 19.2187 13.1953C19.6502 13.1953 20 13.545 20 13.9765C20 15.6997 18.5981 17.1015 16.875 17.1015H13.3493L11.3696 19.6291C11.0394 20.0564 10.5408 20.3025 10.0006 20.3046C9.9983 20.3046 9.99586 20.3046 9.99357 20.3046ZM10.7812 12.5703V8.35155C10.7812 7.92003 10.4315 7.5703 9.99998 7.5703C9.56846 7.5703 9.21873 7.92003 9.21873 8.35155V12.5703C9.21873 13.0018 9.56846 13.3515 9.99998 13.3515C10.4315 13.3515 10.7812 13.0018 10.7812 12.5703ZM9.99998 4.87499C9.56846 4.87499 9.21873 5.22472 9.21873 5.65624C9.21873 6.08776 9.56846 6.43749 9.99998 6.43749C10.4315 6.43749 10.7812 6.08776 10.7812 5.65624C10.7812 5.22472 10.4315 4.87499 9.99998 4.87499Z"
+          fill="#2D264B"
+        />
+      </svg>
+      <div class="the-Name">Note</div>
+    </div>
+    <div class="note-Descr">
+      Some metal finish present here may differ from the actuals.
+    </div>
+  </div>
+
+  <div class="continue-Widget">
+    <div class="continue-Button">
+      <button>Continue</button>
     </div>
   </div>
 </template>
@@ -470,7 +497,7 @@ export default {
 .color-selection-box {
   display: flex;
   width: 100%;
-  padding: 10px;
+  padding: 35px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -556,6 +583,7 @@ export default {
 .CustomChoose {
   margin-top: 20px;
   width: 100%;
+  gap: 5px;
   height: fit-content;
   display: flex;
   text-align: center;
@@ -565,8 +593,8 @@ export default {
 .item1 {
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 60px;
+  padding-left: 60px;
   border-style: solid;
   border-color: #eaeaea;
   border-width: 2px;
@@ -577,8 +605,8 @@ export default {
 .item2 {
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 60px;
+  padding-left: 60px;
   border-style: solid;
   border-color: #eaeaea;
   font-family: "Unbounded";
@@ -589,8 +617,8 @@ export default {
 .item3 {
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 60px;
+  padding-left: 60px;
   border-style: solid;
   border-color: #eaeaea;
   font-family: "Unbounded";
@@ -602,23 +630,25 @@ export default {
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .Next-Page {
-  background: blue;
   padding-bottom: 5px;
   display: flex;
   margin-left: 20px;
+  margin-top: 20px;
   width: fit-content;
   height: fit-content;
-  align-content: center;
+  align-items: center;
   justify-content: center;
 }
 
 .Next-Page svg {
   color: #6f698b;
-  padding-left: 5px;
+  width: fit-content;
+  height: fit-content;
+  padding-left: 15px;
 }
 
 .text1 {
@@ -629,7 +659,7 @@ export default {
 .text2 {
   color: black;
   font-family: "Unbounded";
-  padding-right: 5px;
+  padding-left: 15px;
 }
 
 .grid-wrapper {
@@ -672,6 +702,14 @@ export default {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.third-Text {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-family: "Unbounded";
+}
+
 .colorSelection {
   background: #e3cd00;
 }
@@ -687,6 +725,21 @@ export default {
   font-size: 10px;
 }
 
+.note {
+  display: none;
+}
+
+.continue-Widget {
+  margin-top: 130px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #eaeaea;
+}
+
+.continue-Button button {
+  margin: 20px;
+}
+
 @media only screen and (max-width: 800px) {
   .grid-wrapper {
     display: grid;
@@ -697,6 +750,15 @@ export default {
       "third";
   }
 
+  .CustomChoose {
+    margin-top: 20px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+  }
+
   .item1 {
     padding-left: 30px;
     padding-right: 30px;
@@ -704,16 +766,68 @@ export default {
     padding-bottom: 10px;
   }
   .item2 {
+    margin-left: 8px;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
   .item3 {
-    padding-left: 25px;
-    padding-right: 25px;
+    margin-left: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+
+  .color-selection-box {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eaeaea;
+  }
+
+  .Next-Page {
+    display: none;
+  }
+
+  .note {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    background: #eaeaea;
+  }
+
+  .note-Name {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: fit-content;
+    height: fit-content;
+    font-family: "Unbounded";
+    color: black;
+  }
+
+  .the-Name {
+    padding-left: 10px;
+  }
+
+  .note-Descr {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    line-height: 25px;
+    font-family: "Open+Sans";
+    color: #2d264b;
   }
 }
 </style>
